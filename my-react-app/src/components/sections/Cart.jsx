@@ -1,7 +1,7 @@
 
-import CartItem from '../Cart/CartItem';
-import OrderSummary from '../Cart/OrderSummary';
-import PromoCodeInput from '../Cart/PromoCodeInput';
+import CartItem from '../cart/CartItem';
+import OrderSummary from '../cart/OrderSummary.jsx';
+import PromoCodeInput from '../cart/PromoCodeInput';
 import cartData from '../../lib/cartdata'; // dummy cart data
 import { useState } from 'react';
 
