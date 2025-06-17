@@ -75,7 +75,7 @@ const ProductReviews = ({ reviews, rating, reviewCount }) => {
             onClick={() => setShowAllReviews(true)}
             className="px-8 py-3 border border-gray-300 rounded-full hover:bg-gray-50 transition-colors"
           >
-            Load More Reviewsssssss
+            Load More Review
           </button>
         </div>
       )}

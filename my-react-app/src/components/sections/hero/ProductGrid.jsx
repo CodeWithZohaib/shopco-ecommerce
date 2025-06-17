@@ -13,7 +13,7 @@ export default function ProductGrid() {
             className="border rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow duration-300"
           >
             <img
-              src={product.images && product.images.length > 0 ? product.images[0] : "/images/default.jpg"}
+              src={product.images && product.images.length > 0 ? product.images[0] : "/images/one-life front.jpeg"}
               alt={product.name}
               className="w-full h-56 object-cover rounded-lg mb-4"
               onError={(e) => {

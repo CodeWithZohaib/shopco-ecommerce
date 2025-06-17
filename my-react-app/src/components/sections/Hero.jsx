@@ -7,7 +7,7 @@ import TopSelling from './hero/TopSelling';
 import DressStyleBrowse from './hero/DressStyleBrowse';
 import CustomerReviews from './hero/CustomerReviews';
 import Newsletter from './hero/Newsletter';
-import ProductGrid from './hero/ProductGrid'
+// import ProductGrid from './hero/ProductGrid'
 // import { Products } from '../../lib/data';
 
 export default function Homepage() {
@@ -28,7 +28,7 @@ export default function Homepage() {
       {/* Other Sections */}
       <NewArrivals />
       <TopSelling />
-      <ProductGrid/>
+      {/* <ProductGrid/> */}
       <DressStyleBrowse />
       <CustomerReviews />
       <Newsletter />

@@ -123,13 +123,13 @@ export const categoryProducts = [
     sizes: ["Small", "Medium", "Large", "X-Large"],
     category: "casual"
   },
-  {
+    {
     id: 9,
-    name: "Loose Fit Bermuda Shorts",
+    name: "ONE LIFE GRAPHIC T-SHIRT",
     price: 80,
     originalPrice: null,
     discount: null,
-    image: "/images/shorts.jpeg",
+    image: "/images/one-life front.jpeg",
     rating: 3.0,
     reviewCount: 88,
     colors: [
@@ -137,13 +137,43 @@ export const categoryProducts = [
     ],
     sizes: ["Small", "Medium", "Large", "X-Large"],
     category: "casual"
+  },
+    {
+    id: 11,
+    name: "Black Floral and Slogan T-shirt",
+    price: 212,
+    originalPrice: 242,
+    rating: 4.0,
+    image: "/images/product/productImg.jpeg"
+  },
+  {
+    id: 12,
+    name: "Hamsterdam Graphic T-shirt",
+    price: 145,
+    rating: 3.5,
+    image:  "/images/product/productImg2.jpeg"
+  },
+  {
+    id: 13,
+    name: "OldMoney Details",
+    price: 180,
+    rating: 4.5,
+    image:  "/images/product/productImg3.jpeg"
+  },
+  {
+    id: 14,
+    name: "Black Horse T-shirt",
+    price: 120,
+    originalPrice: 150,
+    rating: 5.0,
+    image:  "/images/product/productImg4.jpeg"
   }
 ];
 
 // Your existing product data (for product detail page)
 export const products = [
   {
-    id: 1,
+    id: 10,
     name: "ONE LIFE GRAPHIC T-SHIRT",
     price: 260,
     originalPrice: 300,
@@ -168,7 +198,7 @@ export const products = [
 
 export const relatedProducts = [
   {
-    id: 2,
+    id: 11,
     name: "Black Floral and Slogan T-shirt",
     price: 212,
     originalPrice: 242,
@@ -176,22 +206,22 @@ export const relatedProducts = [
     image: "/images/product/productImg.jpeg"
   },
   {
-    id: 3,
-    name: "Gradient Graphic T-shirt",
+    id: 12,
+    name: "Hamsterdam Graphic T-shirt",
     price: 145,
     rating: 3.5,
     image:  "/images/product/productImg2.jpeg"
   },
   {
-    id: 4,
-    name: "Polo with Tipping Details",
+    id: 13,
+    name: "OldMoney Details",
     price: 180,
     rating: 4.5,
     image:  "/images/product/productImg3.jpeg"
   },
   {
-    id: 5,
-    name: "Black Striped T-shirt",
+    id: 14,
+    name: "Black Horse T-shirt",
     price: 120,
     originalPrice: 150,
     rating: 5.0,

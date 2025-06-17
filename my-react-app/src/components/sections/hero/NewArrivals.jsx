@@ -3,6 +3,7 @@ import React from "react";
 import { Star } from "lucide-react";
 import { motion } from "framer-motion";
 import { categoryProducts } from "@/lib/data"; 
+import { Link } from "react-router-dom";
 
 const NewArrivals = () => {
   const newArrivalItems = categoryProducts.slice(0, 4); 
@@ -19,17 +20,21 @@ const NewArrivals = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {newArrivalItems.map((product) => (
             <div className="group" key={product.id}>
-              <div className="bg-gray-100 rounded-lg h-64 mb-4 flex items-center justify-center overflow-hidden">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  onError={(e) => {
-                    e.target.src = "/images/placeholder.png"; // fallback
-                  }}
-                />
-              </div>
-              <h3 className="font-medium mb-2">{product.name}</h3>
+              <Link to={`/product/${product.id}`}> {/* Navigate to product detail */}
+                <div className="bg-gray-100 rounded-lg h-64 mb-4 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                      e.target.src = "/images/placeholder.png"; // fallback
+                    }}
+                  />
+                </div>
+              </Link>
+              <Link to={`/product/${product.id}`}>
+                <h3 className="font-medium mb-2 hover:underline">{product.name}</h3>
+              </Link>
               <div className="flex items-center mb-2">
                 {[...Array(Math.floor(product.rating))].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />

@@ -4,6 +4,7 @@ import React from "react";
 import { Star } from "lucide-react";
 import { motion } from "framer-motion";
 import { categoryProducts } from "@/lib/data"; // ✅ Adjust if needed
+import { Link } from "react-router-dom"; // Add this import
 
 const TopSelling = () => {
   const topSellingItems = categoryProducts.slice(4, 8); // 📌 Adjust slice to show different products if needed
@@ -20,17 +21,21 @@ const TopSelling = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {topSellingItems.map((product) => (
             <div className="group" key={product.id}>
-              <div className="bg-white rounded-lg h-64 mb-4 flex items-center justify-center overflow-hidden">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  onError={(e) => {
-                    e.target.src = "/images/placeholder.png";
-                  }}
-                />
-              </div>
-              <h3 className="font-medium mb-2">{product.name}</h3>
+              <Link to={`/product/${product.id}`}> {/* Add Link component here */}
+                <div className="bg-white rounded-lg h-64 mb-4 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                      e.target.src = "/images/placeholder.png";
+                    }}
+                  />
+                </div>
+              </Link>
+              <Link to={`/product/${product.id}`}> {/* Add Link component here */}
+                <h3 className="font-medium mb-2 hover:underline">{product.name}</h3>
+              </Link>
               <div className="flex items-center mb-2">
                 {[...Array(Math.floor(product.rating))].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />

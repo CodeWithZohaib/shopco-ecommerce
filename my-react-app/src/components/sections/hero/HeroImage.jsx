@@ -1,13 +1,13 @@
-"use client";
+// "use client";
 import React from "react";
 import { motion } from "framer-motion";
 
 const HeroImage = () => {
-  const maleModelImage = "/images/ModelCouples-removebg-preview (2).png";
+  const maleModelImage = "/images/modelcouple33.png";
 
   return (
     <motion.div
-      className="flex justify-center items-center relative w-full h-[700px]" // Height bhi increase kari
+      className="flex justify-center items-center relative w-full h-[450px]" 
       initial={{ opacity: 0, x: 40 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
@@ -28,8 +28,9 @@ const HeroImage = () => {
                 e.target.style.display = 'none';
                 e.target.nextSibling.style.display = 'flex';
               }}
+              //  {/* Starburst Bottom right */}
             />
-              <div className="absolute top-4 right-4">
+          <div className="absolute top-4 right-4">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
@@ -40,12 +41,12 @@ const HeroImage = () => {
     </svg>
   </div>
     {/* Starburst Bottom Left */}
-  <div className="absolute bottom-6 left-6">
+  <div className="absolute top-35 left-11">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
       fill="black"
-      className="w-21 h-22"
+      className="w-14 h-15"
     >
       <path d="M50 0 L60 40 L100 50 L60 60 L50 100 L40 60 L0 50 L40 40 Z" />
     </svg>

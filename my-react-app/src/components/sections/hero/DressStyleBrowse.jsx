@@ -6,23 +6,19 @@ import { Link } from "react-router-dom";
 const styles = [
   {
     name: "Casual",
-    bg: "bg-gray-100",
-    image: "/images/casual.jpeg",
+    image: "/images/Casual2.png",
   },
   {
     name: "Formal",
-    bg: "bg-gray-200",
-    image: "/images/formal.jpeg",
+    image: "/images/formal2.png",
   },
   {
     name: "Party",
-    bg: "bg-gray-200",
-    image: "/images/party.jpeg",
+    image: "/images/party2.png",
   },
   {
     name: "Gym",
-    bg: "bg-gray-100",
-    image: "/images/gym.jpeg",
+    image: "/images/gym2.png",
   },
 ];
 
@@ -40,22 +36,22 @@ const DressStyleBrowse = () => (
         {styles.map((style, index) => (
           <Link to={`/category/${style.name.toLowerCase()}`} key={index}>
             <div
-              className={`${style.bg} rounded-lg h-80 p-8 relative overflow-hidden group cursor-pointer`} 
+              className="bg-white rounded-lg shadow-sm p-6 relative overflow-hidden group cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
             >
-              <h3 className="text-3xl font-semibold mb-6">{style.name}</h3> 
+              <h3 className="text-2xl font-semibold mb-2">{style.name}</h3>
 
-              <div className="absolute right-8 top-1/2 transform -translate-y-1/2">
-                <div className="w-48 h-60 rounded-xl shadow-2xl overflow-hidden bg-gray-300">
+              <div className="flex justify-end">
+                <div className="w-full h-48 rounded-lg overflow-hidden">
                   <img
                     src={style.image}
                     alt={`${style.name} style clothing`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 ease-in-out" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out"
                     loading="lazy"
                     onError={(e) => {
                       console.error(`Failed to load image: ${style.image}`);
                       e.target.style.display = "none";
                       e.target.parentElement.innerHTML = `
-                        <div class="w-full h-full bg-gray-400 flex items-center justify-center text-gray-600 text-sm">
+                        <div class="w-full h-full bg-gray-100 flex items-center justify-center text-gray-600 text-sm">
                           ${style.name}
                         </div>
                       `;
